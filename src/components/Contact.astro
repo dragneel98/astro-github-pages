@@ -22,6 +22,55 @@
 </article>
 
 <style>
+   :root {
+    --primary-color: rgba(223, 230, 233, 1.0);
+    --text-color: #282828;
+    --text-color-terminal: #0df205;
+    --text-box-shadow: #09a603 3px 0 20px;
+    --bg-color: rgba(223, 230, 233, 1.0);
+    --bg-card-color: rgba(0, 206, 201, 1.0);
+    --bg-bar-color: rgb(136, 135, 135);
+    --border-articles: 0.4em;
+    --transition: color 0.3s, background-color 0.4s easy-in-out;
+    --skills-bar-length: 0%;
+  }
+  body {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+    background-color: rgb(248, 252, 255);
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  body.dark {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    --primary-color: rgb(26, 26, 26);
+    --bg-color: #282828;
+    --text-color: rgba(223, 230, 233, 1.0);
+    --bg-card-color: rgb(17, 21, 21);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  h2,
+  p,
+  span,
+  a,
+  i{
+    font-size: 1rem;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .title {
+    color: var(--text-color-terminal);
+    font-size: 2rem;
+  }
+  
   .contact {
     display: flex;
     justify-content: center;
@@ -52,7 +101,7 @@
     position: relative;
   } 
 
-  /* .button-contact::after {
+  .button-contact::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
     --slice-2: inset(50% -6px 30% 0);
@@ -69,11 +118,68 @@
     background: linear-gradient(45deg, transparent 3%, var(--primary-color) 3%, var(--primary-color) 5%, var(--text-color-terminal) 5%);
     text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px var(--primary-color);
     clip-path: var(--slice-0);
-  } */
+  }
 
-  /* .button-contact:hover::after {
+  .button-contact:hover::after {
     animation: 1s glitch;
     animation-timing-function: steps(2, end);
-  } */
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+  
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+  
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+  
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+  
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+  
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+  
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+  
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+  
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+  
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+  
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
 </style>
 
